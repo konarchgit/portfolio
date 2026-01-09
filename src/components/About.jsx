@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaDribbble, FaDownload, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import './About.css';
+import pdfResume from '../assets/Konarch_Prasad_Resume-th.pdf';
 
 const About = () => {
     // Accordion State: Default first item (index 0) is open
@@ -157,9 +158,9 @@ const About = () => {
                                 <a href="#"><FaDribbble /></a>
                             </div>
 
-                            <button className="btn-download-full">
+                            <a href={pdfResume} download="Konarch_Prasad_Resume.pdf" className="btn-download-full" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                                 DOWNLOAD NOW <FaDownload />
-                            </button>
+                            </a>
                         </div>
 
 

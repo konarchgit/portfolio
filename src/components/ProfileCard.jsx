@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaTwitter, FaInstagram, FaFacebookF, FaLinkedinIn, FaDribbble, FaDownload, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import './ProfileCard.css';
+import pdfResume from '../assets/Konarch_Prasad_Resume-th.pdf';
 
 const ProfileCard = () => {
     return (
@@ -30,9 +31,9 @@ const ProfileCard = () => {
                     <a href="https://github.com/konarch-dev" className="social-link"><FaGithub /></a>
                 </div>
 
-                <button className="btn-download">
+                <a href={pdfResume} download="Konarch_Prasad_Resume.pdf" className="btn-download" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
                     DOWNLOAD NOW <FaDownload style={{ marginLeft: '8px' }} />
-                </button>
+                </a>
             </div>
         </div>
     );
