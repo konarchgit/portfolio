@@ -16,10 +16,8 @@ const Hero = () => {
                         <h2 className="logo-text">Konarch Prasad</h2>
                     </div>
                     <div className="top-actions">
-                        <div className="theme-toggle">
-                            <FaMoon /> <FaCog />
-                        </div>
-                        <button className="hire-btn">HIRE ME <span className="mail-icon">✉</span></button>
+
+                        <a href="mailto:konarch2026@gmail.com" className="hire-btn">HIRE ME <span className="mail-icon">✉</span></a>
                         <button className="menu-btn" onClick={toggleDrawer}><FaBars /></button>
                     </div>
                 </div>
