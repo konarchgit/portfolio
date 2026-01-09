@@ -1,0 +1,267 @@
+.react-native-app-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0b2422 0%, #051413 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background accent */
+.react-native-app-section::before {
+    content: '';
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.1) 0%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.app-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 1;
+}
+
+.section-subtitle {
+    color: #a0aec0;
+    margin-top: 15px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.app-content {
+    display: flex;
+    flex-direction: column;
+    /* Stack vertically to give space */
+    align-items: center;
+    gap: 50px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Flexible Phone Row */
+.app-screenshots-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    /* Allow wrapping on small screens */
+    width: 100%;
+    perspective: 1000px;
+}
+
+.app-screenshot-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 6px solid #1a1a1a;
+    background: #000;
+    aspect-ratio: 9/19;
+    width: 180px;
+    /* Slightly smaller to fit 4 in a row */
+    position: relative;
+    flex-shrink: 0;
+}
+
+.app-screenshot-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Interactive Hover Effect - Fan out slightly */
+.app-screenshot-card:hover {
+    transform: translateY(-15px) scale(1.05) !important;
+    /* Force override */
+    box-shadow: 0 30px 60px rgba(16, 185, 129, 0.25);
+    z-index: 100;
+    border-color: var(--primary-color);
+}
+
+/* Info Panel - wide and centered */
+.app-info-panel {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+.app-feature-list {
+    flex: 1;
+    max-width: 450px;
+}
+
+.download-area {
+    flex: 1;
+    max-width: 450px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    text-align: center;
+}
+
+/* Feature list and other text styles preserved... */
+.app-feature-list h3 {
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-left: 4px solid var(--primary-color);
+    padding-left: 15px;
+}
+
+.app-feature-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.app-feature-list li {
+    color: #cbd5e0;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+}
+
+.app-feature-list li span {
+    margin-right: 12px;
+    font-size: 1.2rem;
+}
+
+.platform-badges {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.badge.android {
+    color: #3ddc84;
+    background: rgba(61, 220, 132, 0.1);
+}
+
+.badge.ios {
+    color: #a0aec0;
+    background: rgba(160, 174, 192, 0.1);
+}
+
+.btn-download-apk {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: linear-gradient(90deg, var(--primary-color) 0%, #0d9488 100%);
+    color: #0b2422;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 14px 28px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    width: 100%;
+}
+
+.btn-download-apk:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(16, 185, 129, 0.4);
+}
+
+.icon-pulse {
+    animation: pulse 2s infinite;
+}
+
+.version-text {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #718096;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Reset specific transforms for cleaner row */
+.main-screen,
+.side-screen-top,
+.side-screen-bottom {
+    transform: none;
+    /* Reset individual transforms */
+}
+
+/* Add subtle rotation pattern for 4 items if desired, or keep flat.
+   Let's keep flat and clean but maybe odd/even tilt? */
+.app-screenshot-card:nth-child(odd) {
+    transform: rotateY(0deg) translateY(10px);
+}
+
+.app-screenshot-card:nth-child(even) {
+    transform: translateY(-10px);
+}
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .app-info-panel {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .app-feature-list,
+    .download-area {
+        max-width: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .app-screenshot-card {
+        width: 140px;
+        /* Smaller on mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .app-screenshot-card {
+        width: 120px;
+        border-width: 4px;
+        margin: 5px;
+    }
+
+    .app-screenshots-grid {
+        gap: 10px;
+    }
+
+    .app-feature-list li {
+        font-size: 0.95rem;
+    }
+}

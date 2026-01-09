@@ -1,0 +1,53 @@
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 80px;
+    background-color: transparent;
+    /* Or a semi-transparent background if needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    padding: 20px 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--bg-color);
+    border-radius: 0 20px 20px 0;
+}
+
+.sidebar-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.sidebar-icon {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: var(--card-bg);
+}
+
+.sidebar-icon:hover,
+.sidebar-icon.active {
+    color: #fff;
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 174, 0, 0.3);
+}
+
+@media screen and (max-width: 960px) {
+    .sidebar {
+        display: none;
+        /* Hide standard sidebar on mobile, use drawer/bottom nav instead */
+    }
+}

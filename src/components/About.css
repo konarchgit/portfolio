@@ -1,0 +1,295 @@
+.about-section {
+    padding: 100px 0;
+    background-color: var(--bg-dark);
+}
+
+.about-header {
+    margin-bottom: 60px;
+}
+
+.about-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.about-label .icon {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.about-title {
+    font-size: 4rem;
+    line-height: 1.2;
+    color: #fff;
+}
+
+.about-title .highlight-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+/* Grid Layout */
+.about-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 30px;
+}
+
+/* Cards Global */
+.about-card {
+    background-color: #0f2e2b;
+    border: 1px solid rgba(255, 174, 0, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Personal Card */
+.personal-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.card-name {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.card-bio {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    margin-bottom: 8px;
+    color: #ddd;
+}
+
+.card-socials {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    margin-top: auto;
+    /* Push socials to bottom */
+}
+
+.card-socials a {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.card-socials a:hover {
+    background: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+}
+
+.btn-download-full {
+    background: var(--primary-color);
+    color: #000;
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.copyright-text {
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+}
+
+/* Right Column */
+.about-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.bio-card {
+    flex: 1;
+}
+
+/* Accordion Styles */
+.experience-accordion {
+    margin-top: 20px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+.accordion-item:last-child {
+    border-bottom: none;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px 0;
+    transition: 0.3s;
+}
+
+.accordion-header:hover {
+    color: var(--primary-color);
+}
+
+.accordion-title {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.accordion-title .role-text {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+    margin-left: 8px;
+    font-weight: 400;
+}
+
+.accordion-icon {
+    color: var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.accordion-item.active .accordion-content {
+    max-height: 1000px;
+    /* Large enough to fit content */
+    padding-top: 15px;
+    padding-bottom: 10px;
+    opacity: 1;
+}
+
+.experience-period {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+.accordion-content ul {
+    list-style: none;
+    padding-left: 10px;
+}
+
+.accordion-content ul li {
+    color: #ddd;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Skills Row */
+.skills-row {
+    display: flex;
+    gap: 30px;
+}
+
+.skill-card {
+    flex: 1;
+}
+
+.skill-icon {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.skill-card h4 {
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.circle-indicator {
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle-indicator::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 960px) {
+    .about-grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-row {
+        flex-direction: column;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .accordion-title {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .accordion-title .role-text {
+        margin-left: 0;
+        margin-top: 4px;
+    }
+}

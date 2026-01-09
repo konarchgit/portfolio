@@ -1,0 +1,203 @@
+.hero-section {
+    padding: 0;
+    min-height: 100vh;
+    /* Keeps hero full height of viewport */
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Top Bar */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.logo-text {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.top-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.theme-toggle {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 15px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hire-btn {
+    background-color: var(--primary-color);
+    color: #000;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.menu-btn {
+    background: transparent;
+    color: #fff;
+    font-size: 1.8rem;
+    display: none;
+    /* Hide by default on desktop if drawer is only for mobile, but user wanted it shown in screenshot? Screenshot had hamburger. Keeping it. */
+    display: block;
+}
+
+/* Layout */
+.hero-content-only {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 100px;
+}
+
+.welcome-text {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.icon-box {
+    color: var(--primary-color);
+}
+
+.main-heading {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.highlight-italic {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}
+
+.hero-subtext {
+    color: var(--text-secondary);
+    max-width: 600px;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Extras */
+.hero-extras {
+    display: flex;
+    justify-content: flex-start;
+    /* Aligned left now since full width */
+    align-items: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.circular-text {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: spin 10s linear infinite;
+}
+
+.circular-text text {
+    fill: #fff;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.arrow-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.reviews-client {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.client-avatars {
+    display: flex;
+}
+
+.client-avatars img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid var(--bg-dark);
+    margin-left: -15px;
+}
+
+.client-avatars img:first-child {
+    margin-left: 0;
+}
+
+.review-badge {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-left: -15px;
+    z-index: 2;
+    border: 2px solid var(--bg-dark);
+}
+
+.reviews-text {
+    color: #fff;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Responsive */
+@media screen and (max-width: 1024px) {
+    .main-heading {
+        font-size: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .hero-extras {
+        justify-content: space-between;
+    }
+}

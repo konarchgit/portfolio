@@ -1,0 +1,56 @@
+.app-drawer {
+    width: 300px !important;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.drawer-logo {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.close-btn {
+    background: none;
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 5px;
+}
+
+.drawer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.drawer-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 500;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.drawer-menu li a:hover {
+    color: var(--primary-color);
+}
+
+.drawer-cta {
+    margin-top: 40px;
+}
+
+.drawer-cta .btn-primary {
+    width: 100%;
+    justify-content: center;
+}
