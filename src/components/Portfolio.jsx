@@ -17,6 +17,7 @@ const Portfolio = () => {
         },
         { id: 11, link: 'https://cantinaamericana.com/', title: 'Cantina America', category: 'woocommerce resturant shop', img: 'p11.png' },
         { id: 12, link: 'https://djbandsupply.com/', title: 'djbandsupply', category: 'shopify music ecommerce shop', img: 'p12.png' },
+        { id: 13, link: 'https://konarch.me/north', title: 'North Face', category: 'north face woocommerce  shop', img: 'p13.png' },
     ];
 
     return (
